@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro con Zod</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+
+    <main>
+        <h1>Formulario de Registro</h1>
+        <p>Validación de datos utilizando Zod</p>
+
+        <form id="formulario" novalidate>
+
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Ingresa tu nombre"
+                    aria-describedby="error-nombre"
+                    required
+                >
+                <small id="error-nombre" class="error"></small>
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo electrónico:</label>
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="ejemplo@correo.com"
+                    aria-describedby="error-correo"
+                    required
+                >
+                <small id="error-correo" class="error"></small>
+            </div>
+
+            <div class="campo">
+                <label for="contrasena">Contraseña:</label>
+                <input
+                    type="password"
+                    id="contrasena"
+                    placeholder="Ingresa una contraseña"
+                    aria-describedby="error-contrasena"
+                    required
+                >
+                <small id="error-contrasena" class="error"></small>
+            </div>
+
+            <button type="submit">Registrarse</button>
+
+        </form>
+
+        <p id="resultado" role="status"></p>
+
+    </main>
+
+</body>
+</html>
